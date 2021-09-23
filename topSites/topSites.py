@@ -34,7 +34,7 @@ def setTopSites():
     for userId in userIds:
       capturedUrls = getUserCapturedUrls(cur, userId)
 
-      domains = []      
+      domains = []
       for capturedUrl in capturedUrls:
         domains.append(urlParse(capturedUrl[0]).netloc)
 
@@ -47,7 +47,7 @@ def setTopSites():
       else:
         updateTopSites(cur, userId, topSites)
 
-      conn.commit() 
+      conn.commit()
       print(f"Dados commitados para userId {userId[0]}")
 
   except (Exception, psycopg2.DatabaseError) as error:

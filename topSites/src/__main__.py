@@ -3,8 +3,6 @@ from urllib.parse import urlparse as urlParse
 from collections import Counter
 import json
 
-
-conn = None
 def open_conn():
   try:
     conn = psycopg2.connect(
